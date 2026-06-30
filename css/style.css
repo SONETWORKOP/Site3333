@@ -127,9 +127,21 @@ body {
 .mobile-menu a:hover { color: var(--green); }
 
 /* ─── Hero ─────────────────────────────────────────── */
+#heroBgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
 .hero {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -137,8 +149,8 @@ body {
   text-align: center;
   padding: 120px 24px 80px;
   background:
-    radial-gradient(ellipse 70% 55% at 50% 35%, rgba(34,197,94,0.11) 0%, transparent 70%),
-    radial-gradient(ellipse 40% 30% at 80% 70%, rgba(34,197,94,0.06) 0%, transparent 60%);
+    radial-gradient(ellipse 70% 55% at 50% 35%, rgba(34,197,94,0.15) 0%, transparent 70%),
+    radial-gradient(ellipse 40% 30% at 80% 70%, rgba(34,197,94,0.08) 0%, transparent 60%);
 }
 
 .hero-inner {
