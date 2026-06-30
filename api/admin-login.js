@@ -1,0 +1,52 @@
+import { initializeApp, getApps, getApp } from 'firebase/app';
+import { getFirestore, doc, getDoc, setDoc } from 'firebase/firestore';
+
+const firebaseConfig = {
+  projectId: 'carbide-karst-cn56p',
+  appId: '1:167651520855:web:87d49ba358ae76d5714e12',
+  apiKey: 'AIzaSyD9NkwZz_lB9U151q3pCwz9fVSvgA2mlA0',
+  authDomain: 'carbide-karst-cn56p.firebaseapp.com',
+  firestoreDatabaseId: 'ai-studio-b381ded3-8607-40c9-b944-335f3be8de1e',
+  storageBucket: 'carbide-karst-cn56p.firebasestorage.app',
+  messagingSenderId: '167651520855',
+};
+
+function getDB() {
+  const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
+  return getFirestore(app, firebaseConfig.firestoreDatabaseId);
+}
+
+export default async function handler(req, res) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+
+  if (req.method === 'OPTIONS') {
+    return res.status(200).end();
+  }
+
+  if (req.method !== 'POST') {
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  try {
+    const { password } = req.body || {};
+    const submitted = (password || '').toString().trim();
+    const envPassword = (process.env.ADMIN_PASSWORD || 'Shiva8131').trim();
+
+    const matches =
+      envPassword.length > 0 &&
+      (submitted === envPassword || submitted.toLowerCase() === envPassword.toLowerCase());
+
+    if (matches) {
+      return res.status(200).json({
+        success: true,
+        token: `craftedge_session_${Date.now()}`,
+        username: 'Admin',
+      });
+    }
+    return res.status(401).json({ success: false, message: 'Incorrect administrator password.' });
+  } catch (e) {
+    return res.status(500).json({ error: e.message });
+  }
+}

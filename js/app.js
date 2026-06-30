@@ -80,7 +80,7 @@ function renderFeatures() {
 // ─── Updates ──────────────────────────────────────────
 async function loadUpdates() {
   try {
-    const res = await fetch('/.netlify/functions/updates');
+    const res = await fetch('/api/updates');
     updates = await res.json();
   } catch (e) {
     console.error(e);
@@ -119,7 +119,7 @@ function renderUpdates() {
 }
 
 async function downloadUpdate(id, url) {
-  try { await fetch(`/.netlify/functions/updates-download?id=${id}`, { method: 'POST' }); } catch (_) {}
+  try { await fetch(`/api/updates-download?id=${id}`, { method: 'POST' }); } catch (_) {}
   window.open(url, '_blank');
 }
 
@@ -175,7 +175,7 @@ async function adminLogin() {
   const pw = document.getElementById('adminPassword').value;
   const msg = document.getElementById('loginMsg');
   try {
-    const res = await fetch('/.netlify/functions/admin-login', {
+    const res = await fetch('/api/admin-login', {
       method: 'POST',
       body: JSON.stringify({ password: pw })
     });
@@ -200,7 +200,7 @@ async function adminLogin() {
 
 async function loadSettings() {
   try {
-    const res = await fetch('/.netlify/functions/settings');
+    const res = await fetch('/api/settings');
     const data = await res.json();
     if (data.discordUrl) {
       discordUrl = data.discordUrl;
@@ -214,7 +214,7 @@ async function saveSettings() {
   const url = document.getElementById('discordUrl').value;
   const msg = document.getElementById('settingsMsg');
   try {
-    const res = await fetch('/.netlify/functions/settings', {
+    const res = await fetch('/api/settings', {
       method: 'PUT',
       headers: { 'Authorization': `Bearer ${adminToken}` },
       body: JSON.stringify({ discordUrl: url })
@@ -239,7 +239,7 @@ async function addUpdate() {
     msg.className = 'msg err'; return;
   }
   try {
-    const res = await fetch('/.netlify/functions/updates-create', {
+    const res = await fetch('/api/updates-create', {
       method: 'POST',
       headers: { 'Authorization': `Bearer ${adminToken}` },
       body: JSON.stringify({ version, title, downloadUrl: url, description: desc })
@@ -256,7 +256,7 @@ async function addUpdate() {
 async function deleteUpdate(id) {
   if (!confirm('Delete this update?')) return;
   try {
-    const res = await fetch(`/.netlify/functions/updates-delete?id=${id}`, {
+    const res = await fetch(`/api/updates-delete?id=${id}`, {
       method: 'DELETE',
       headers: { 'Authorization': `Bearer ${adminToken}` }
     });

@@ -1,7 +1,7 @@
 {
-  "name": "craftedge-portal",
+  "name": "craftedge",
   "version": "1.0.0",
-  "description": "CraftEdge Bedrock Client Portal",
+  "description": "CraftEdge - Ultimate Minecraft Bedrock Client Portal",
   "type": "module",
   "dependencies": {
     "firebase": "^10.12.0"
