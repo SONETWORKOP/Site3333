@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>CraftEdge Productions — Shaders for Minecraft Bedrock</title>
+<meta name="description" content="CraftEdge shaders for Minecraft Bedrock: Newb CraftEdge, Newb Hysteria, Newb SV-Zero and the CraftEdge Replay recorder."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=13"/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%2344bd32'/><rect x='3' y='4' width='4' height='4' fill='%23111'/><rect x='9' y='4' width='4' height='4' fill='%23111'/><rect x='6' y='9' width='4' height='2' fill='%23111'/><rect x='5' y='11' width='2' height='3' fill='%23111'/><rect x='9' y='11' width='2' height='3' fill='%23111'/></svg>"/>
+</head>
+<body>
+
+<header class="topnav" id="nav">
+  <div class="topnav-in">
+    <a class="logo" href="#top"><span class="creeper"></span><span class="logo-txt">CRAFTEDGE<em>PRODUCTIONS</em></span></a>
+    <nav class="links" id="links">
+      <a href="#packs">Shaders</a><a href="#news">News</a><a href="#guide">Guide</a>
+    </nav>
+    <div class="topnav-right">
+      <a class="discord-pill" href="https://discord.gg/yGtaX5nb8M" target="_blank" rel="noopener">Discord</a>
+      <a class="mc-get" href="#packs">Download</a>
+      <button class="burger" id="burger" aria-label="menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="slide active" style="background-image:url('assets/shot-ce1.jpg')"></div>
+  <div class="slide" style="background-image:url('assets/shot-hy1.jpg')"></div>
+  <div class="slide" style="background-image:url('assets/shot-sv1.jpg')"></div>
+  <div class="slide" style="background-image:url('assets/replay.jpg')"></div>
+  <div class="slide" style="background-image:url('assets/shot-ce2.jpg')"></div>
+  <div class="slide" style="background-image:url('assets/shot-hy2.jpg')"></div>
+  <div class="slide" style="background-image:url('assets/shot-sv2.jpg')"></div>
+  <div class="hero-shade"></div>
+  <div class="wrap hero-in">
+    <div class="kicker">MINECRAFT BEDROCK · RENDERDRAGON SHADERS</div>
+    <h1><span class="t-row"><span class="t-line">CRAFTEDGE</span></span><span class="t-row"><span class="t-line d2">PRODUCTIONS</span></span></h1>
+    <p class="hero-sub">Cinematic fog, godrays and mirror water for Bedrock — plus a camera to film it all. Free, made by players.</p>
+    <div class="hero-btns">
+      <a class="mc-btn" href="#packs">Get the packs</a>
+      <a class="mc-btn outline" href="https://discord.gg/yGtaX5nb8M" target="_blank" rel="noopener">Join our Discord</a>
+    </div>
+    <div class="dots" id="dots"><span class="active"></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  </div>
+</section>
+
+<!-- GAME TILES -->
+<section class="tiles" id="packs">
+  <div class="wrap">
+    <h2>Explore our packs</h2>
+    <p class="sec-sub">Four releases, one studio. Pick your flavour of light.</p>
+    <div class="tile-grid">
+      <article class="tile">
+        <div class="tile-logo"><img src="assets/logo-cf-ce.png" alt="Newb CraftEdge logo" loading="lazy"/><span class="tile-flag">MOST POPULAR</span></div>
+        <div class="tile-body">
+          <h3>Newb CraftEdge</h3>
+          <p>Newb x CraftEdge overhauls Bedrock's visuals — denser fog, stronger godrays, reflective wet ground, realistic water with sharp ripples, full sky reflections and sun highlights. 163.9K downloads.</p>
+          <div class="tile-meta">10.74 MB · MC 1.26.50 · 20 Sep 2026</div>
+          <div class="tile-btns"><a class="mc-btn sm" href="https://mcpedl.com/newbcraftedge/" target="_blank" rel="noopener">Download this pack</a><button class="mc-btn sm gray shots-btn" data-pack="ce">Screenshots</button></div>
+        </div>
+      </article>
+      <article class="tile">
+        <div class="tile-logo"><img src="assets/logo-cf-hy.png" alt="Newb Hysteria logo" loading="lazy"/><span class="tile-flag blue">NEW UPDATE</span></div>
+        <div class="tile-body">
+          <h3>Newb X Hysteria</h3>
+          <p>Dark horror visuals with blood red lighting, deep shadows, scary fog, glowing ores and a blood moon. 2.3K downloads.</p>
+          <div class="tile-meta">7.91 MB · MC 1.26.50 · 21 Sep 2026</div>
+          <div class="tile-btns"><a class="mc-btn sm" href="https://mcpedl.com/newb-hysteria/" target="_blank" rel="noopener">Download this pack</a><button class="mc-btn sm gray shots-btn" data-pack="hy">Screenshots</button></div>
+        </div>
+      </article>
+      <article class="tile">
+        <div class="tile-logo"><img src="assets/logo-cf-sv.png" alt="Newb SV-Zero logo" loading="lazy"/></div>
+        <div class="tile-body">
+          <h3>Newb SV-Zero</h3>
+          <p>A simple, aesthetic, warm and lightweight shader — best visuals at minimal performance cost. 12.5K downloads.</p>
+          <div class="tile-meta">8.36 MB · RenderDragon · 27 Aug 2026</div>
+          <div class="tile-btns"><a class="mc-btn sm" href="https://mcpedl.com/newb-sv-zero-render-dragon-shader/" target="_blank" rel="noopener">Download this pack</a><button class="mc-btn sm gray shots-btn" data-pack="sv">Screenshots</button></div>
+        </div>
+      </article>
+      <article class="tile">
+        <div class="tile-logo"><img src="assets/logo-cf-re.png" alt="CraftEdge Replay logo" loading="lazy"/><span class="tile-flag amber">VIDEO TOOL</span></div>
+        <div class="tile-body">
+          <h3>CraftEdge Replay</h3>
+          <p>A cinematic replay and camera system for Bedrock — record gameplay and create smooth cinematic shots. 911 downloads.</p>
+          <div class="tile-meta">3.78 MB · MC 26.30 · 11 Sep 2026</div>
+          <div class="tile-btns"><a class="mc-btn sm" href="https://mcpedl.com/craftedgereplay/" target="_blank" rel="noopener">Download this tool</a><button class="mc-btn sm gray shots-btn" data-pack="replay">Screenshots</button></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section class="news" id="news">
+  <div class="wrap">
+    <h2>Latest from the studio</h2>
+    <p class="sec-sub">Release notes and announcements.</p>
+    <div class="news-grid">
+      <article class="news-card">
+        <div class="news-img"><img src="assets/hysteria.jpg" alt="Hysteria update" loading="lazy"/><span class="date">21 SEP 2026</span></div>
+        <div class="news-body"><h3>Hysteria adds 1.26.50 support</h3><p>NewbXHysteria Updated (7.91 MB) is out with support for the latest Bedrock build.</p><a class="learn" href="https://mcpedl.com/newb-hysteria/" target="_blank" rel="noopener">Read more ›</a></div>
+      </article>
+      <article class="news-card">
+        <div class="news-img"><img src="assets/shot-ce5.jpg" alt="CraftEdge fixed build" loading="lazy"/><span class="date">20 SEP 2026</span></div>
+        <div class="news-body"><h3>CraftEdge fixed build lands</h3><p>The 10.74 MB fixed build brings the new Vivid tonemap, dark nights and End reflections.</p><a class="learn" href="https://mcpedl.com/newbcraftedge/" target="_blank" rel="noopener">Read more ›</a></div>
+      </article>
+      <article class="news-card">
+        <div class="news-img"><img src="assets/replay.jpg" alt="Replay launch" loading="lazy"/><span class="date">11 SEP 2026</span></div>
+        <div class="news-body"><h3>Meet CraftEdge Replay</h3><p>Our cinematic camera recorder for Bedrock creators is here. Film your world like a trailer.</p><a class="learn" href="https://mcpedl.com/craftedgereplay/" target="_blank" rel="noopener">Read more ›</a></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- SUPPORT -->
+<section class="support" id="guide">
+  <div class="wrap">
+    <h2>How to use — from CurseForge</h2>
+    <p class="sec-sub">Requires a material / render binary loader — it will not work on official, unmodified Minecraft. Tip from the author: apply under Global Resources (not one world) so fog, water and lighting work everywhere.</p>
+    <div class="steps">
+      <div><b>1 · Download</b><p>Get the .mcpack from the pack's CurseForge page. Never unzip it.</p></div>
+      <div><b>2 · Open with a loader</b><p>Android: open it with <b>MB Loader</b> — it imports automatically. Windows: install <b>BetterRenderDragon</b> (or <b>Wyvern Loader</b>) first, then import the pack.</p></div>
+      <div><b>3 · Activate</b><p>Minecraft → Settings → Global Resources → find <b>Newb CraftEdge Shaders</b> → Activate.</p></div>
+      <div><b>4 · Restart</b><p>Restart Minecraft for all effects — fog, water, lighting — to fully apply.</p></div>
+    </div>
+    <div class="tabs"><div class="tab-btns"><button class="active" data-t="a">Android</button><button data-t="b">Windows</button><button data-t="c">Linux</button><button data-t="d">Replay add-on</button></div>
+      <div class="tab-p active" id="p-a">1. Download the .mcpack from the CurseForge page. 2. Open it with <b>MB Loader</b> — it imports automatically. 3. Open Minecraft → Settings → Global Resources. 4. Find <b>Newb CraftEdge Shaders</b> and activate it. 5. Restart Minecraft.</div>
+      <div class="tab-p" id="p-b">1. Download <b>BetterRenderDragon</b> and follow its installation guide. 2. Import the shader resource pack. 3. Enable it in Settings → Global Resources. 4. Restart Minecraft.<br/><br/>No BRD? Use <b>Wyvern Loader</b> instead — it works like Android's Draco loader, but for Windows: run the installer, finish setup, click <b>Inject</b> in Wyvern when Minecraft loads (or enable load on startup), then enable the shader in Global Resource Packs. <a href="https://github.com/mcbegamerxx954/wyvern_releases/releases/tag/v0.0.1" target="_blank" rel="noopener">Get Wyvern v0.0.1 ↗</a></div>
+      <div class="tab-p" id="p-c">For mcpelauncher-manifest users only (x86_64). 1. Download mcpelauncher-manifest. 2. Download mcpelauncher-materialbinloader. 3. Import the shader pack. 4. Enable it in Settings → Global Resources. 5. Restart if needed.</div>
+      <div class="tab-p" id="p-d">Replay ek .mcaddon hai (behavior + resource ek me). File kholo → import → world settings me <b>Behavior Packs</b> AUR <b>Resource Packs</b> dono me CraftEdge Replay activate karo → maange to experiments on karo → Play.</div>
+    </div>
+    <div class="faq" id="faq">
+      <details open><summary>Which pack is the main one?<span>+</span></summary><p><b>Newb CraftEdge</b> — 162K+ downloads, every feature. Hysteria is the moodier alternate, SV-Zero the lightweight.</p></details>
+      <details><summary>Do I need MB Loader / BetterRenderDragon?<span>+</span></summary><p>Yes — official word: the pack needs a material / render binary loader and will not work on unmodified Minecraft. Android → MB Loader, Windows → BetterRenderDragon, Linux → materialbinloader.</p></details>
+      <details><summary>Does it work with Vibrant Visuals?<span>+</span></summary><p>No — standalone RenderDragon shaders. Keep Vibrants off.</p></details>
+      <details><summary>What is CraftEdge Replay?<span>+</span></summary><p>A .mcaddon camera recorder (MC 26.30) for trailers and showcases — pair it with any shader.</p></details>
+      <details><summary>Can I use it in videos?<span>+</span></summary><p>Yes, free. Credit “by CraftEdgeProductions” + link the MCPEDL / CurseForge page.</p></details>
+    </div>
+  </div>
+</section>
+
+<!-- DISCORD PROMO -->
+<section class="promo">
+  <div class="wrap promo-in">
+    <div><h2>Join the CraftEdge Discord</h2><p>Update pings, support and sneak peeks of the next pack.</p><p class="live-count"><span class="pulse-dot"></span><b id="dcOnline">…</b> online right now · <b id="dcTotal">142</b> members</p></div>
+    <a class="mc-btn light" href="https://discord.gg/yGtaX5nb8M" target="_blank" rel="noopener">Join Discord</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand"><span class="creeper"></span><b>CRAFTEDGE</b><p>A Bedrock shader studio. Shaders, tools and trailers for the blocky world.</p></div>
+    <div><b>PACKS</b><a href="https://mcpedl.com/newbcraftedge/" target="_blank" rel="noopener">Newb CraftEdge</a><a href="https://mcpedl.com/newb-hysteria/" target="_blank" rel="noopener">Newb Hysteria</a><a href="https://mcpedl.com/newb-sv-zero-render-dragon-shader/" target="_blank" rel="noopener">Newb SV-Zero</a><a href="https://mcpedl.com/craftedgereplay/" target="_blank" rel="noopener">CraftEdge Replay</a></div>
+    <div><b>STUDIO</b><a href="https://discord.gg/yGtaX5nb8M" target="_blank" rel="noopener">Discord</a><a href="https://www.curseforge.com/members/craftedge/projects" target="_blank" rel="noopener">CurseForge</a><a href="#guide">Support</a><a href="#top">Back to top ↑</a></div>
+  </div>
+  <div class="legal">© 2026 CraftEdgeProductions · Fan project — not affiliated with Mojang or Microsoft · Built on Newb by devendrn (MIT)</div>
+</footer>
+
+<div class="lightbox" id="lightbox"><span class="lb-arrow" id="lbPrev">‹</span><img id="lbImg" alt="screenshot"/><span class="lb-arrow" id="lbNext">›</span><span id="lbClose">✕</span><div class="lb-count" id="lbCount"></div></div>
+<script src="script.js?v=13"></script>
+</body>
+</html>
